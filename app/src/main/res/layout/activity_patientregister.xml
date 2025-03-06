@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".PatientRegisterActivity">
+
+    <include layout="@layout/backgroung_login_registry" />
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="249dp"
+        android:layout_height="226dp"
+        android:src="@drawable/image3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.055" />
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="324dp"
+        android:background="#DEFDDE"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.43">
+
+        <TextView
+            android:id="@+id/login_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#E0FFE0"
+            android:fontFamily="@font/ubuntu_medium"
+            android:text="Регистрация"
+            android:textColor="#000000"
+            android:textSize="30sp" />
+
+        <LinearLayout
+            android:id="@+id/email_lin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34dp"
+            android:background="#E0FFE0"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/icon_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/email_icon" />
+
+            <EditText
+                android:id="@+id/email_et"
+                android:layout_width="242dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:fontFamily="@font/ubuntu_light"
+                android:hint="Электронная почта"
+                android:textColor="#000000"
+                android:textColorHint="@color/dark_gray"
+                tools:ignore="TouchTargetSizeCheck"
+                android:inputType="text"
+                android:maxLines="1"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/emailErrorTv"
+            android:layout_width="234dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="-10dp"
+            tools:ignore="MissingConstraints" />
+
+        <LinearLayout
+            android:id="@+id/username_lin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#E0FFE0"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/icon_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/username_icon" />
+
+            <EditText
+                android:id="@+id/username_et"
+                android:layout_width="242dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:fontFamily="@font/ubuntu_light"
+                android:hint="ФИО"
+                android:textColor="#000000"
+                android:textColorHint="@color/dark_gray"
+                tools:ignore="TouchTargetSizeCheck"
+                android:inputType="text"
+                android:maxLines="1"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/usernameErrorTv"
+            android:layout_width="234dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="-10dp"
+            tools:ignore="MissingConstraints" />
+
+        <LinearLayout
+            android:id="@+id/password_lin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#E0FFE0"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/icon_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/password_icon" />
+
+            <EditText
+                android:id="@+id/password_et"
+                android:layout_width="242dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:fontFamily="@font/ubuntu_light"
+                android:hint="Пароль"
+                android:inputType="textPassword"
+                android:textColor="#000000"
+                android:textColorHint="@color/dark_gray"
+                tools:ignore="TouchTargetSizeCheck"
+                android:maxLines="1"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/passwordErrorTv"
+            android:layout_width="234dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="-10dp"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/sign_up_btn"
+            android:layout_width="268dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/green"
+            android:fontFamily="@font/ubuntu_light"
+            android:text="Зарегистрироваться"
+            android:textColor="#d0f0d0"
+            android:textSize="17dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

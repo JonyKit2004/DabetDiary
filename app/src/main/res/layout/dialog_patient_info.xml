@@ -1,0 +1,49 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/dialog_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Хотите добавить информацию о пациенте или посмотреть его записи?"
+        android:textSize="18sp"
+        android:paddingBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/editText_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введите информацию"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/button_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Сохранить"/>
+
+        <Button
+            android:id="@+id/button_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Назад"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_view_records"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Посмотреть записи"
+        android:layout_marginTop="16dp"/>
+</LinearLayout>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+<include layout="@layout/backgroung_login_registry" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="288dp"
+        android:layout_height="276dp"
+        android:src="@drawable/image1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.123" />
+
+    <LinearLayout
+        android:id="@+id/login_lin"
+        android:layout_width="293dp"
+        android:layout_height="391dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="2dp"
+        android:background="#E0FFE0"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView3">
+
+        <TextView
+            android:id="@+id/login_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/ubuntu_medium"
+            android:text="Войти"
+            android:textColor="#000000"
+            android:textSize="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3"
+            app:layout_constraintVertical_bias="0.002" />
+
+        <TextView
+            android:id="@+id/emailorpasswordErrorTv"
+            android:layout_width="270dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="34dp"
+            app:layout_constraintBottom_toTopOf="@+id/email_lin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/login_title"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <LinearLayout
+            android:id="@+id/email_lin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/login_title">
+
+            <ImageView
+                android:id="@+id/icon_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/email_icon" />
+
+            <EditText
+                android:id="@+id/email_et"
+                android:layout_width="242dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:fontFamily="@font/ubuntu_light"
+                android:hint="Электронная почта"
+                android:textColor="#000000"
+                android:textColorHint="@color/dark_gray"
+                tools:ignore="TouchTargetSizeCheck"
+                android:inputType="text"
+                android:maxLines="1"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/password_lin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/email_lin">
+
+            <ImageView
+                android:id="@+id/icon_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/password_icon" />
+
+            <EditText
+                android:id="@+id/password_et"
+                android:layout_width="242dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:fontFamily="@font/ubuntu_light"
+                android:hint="Пароль"
+                android:inputType="textPassword"
+                android:textColor="#000000"
+                android:textColorHint="@color/dark_gray"
+                tools:ignore="TouchTargetSizeCheck"
+                android:maxLines="1"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/forgotPasswordTv"
+            android:layout_width="234dp"
+            android:layout_height="23dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/login_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password_lin"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="165dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/green"
+            android:fontFamily="@font/ubuntu_light"
+            android:text="Войти"
+            android:textColor="#d0f0d0"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password_lin"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/login_btn">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Впервые здесь?"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/go_to_register_activity_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="   Зарегистрироваться"
+                android:textColor="@color/blue" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

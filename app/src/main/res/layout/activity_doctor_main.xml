@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/green"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:title="  " />
+
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/titleTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:gravity="center"
+                    android:text="Добро пожаловать в Diabet Diary!"
+                    android:textColor="#333333"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/introductionTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="4dp"
+                    android:fontFamily="@font/ubuntu_light"
+                    android:text="Мы рады представить вам мощный инструмент для управления вашим состоянием здоровья. Diabet Diary поможет вам следить за медицинскими данными и получать важную информацию о вашем самочувствии."
+                    android:textColor="#333333"
+                    android:textSize="16sp"
+                    android:layout_marginTop="8dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#CCCCCC"
+                    android:layout_marginVertical="16dp" />
+
+                <TextView
+                    android:id="@+id/featuresTitleTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="4dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="Основные функции приложения:"
+                    android:textColor="#333333"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/featuresTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="4dp"
+                    android:fontFamily="@font/ubuntu_light"
+                    android:text="- Просмотр медицинских показателей пациентов в реальном времени: Доктора могут отслеживать уровень сахара, данные о приеме медикаментов и другие важные медицинские показатели своих пациентов в режиме реального времени.\n- Доступ к списку пациентов: Врач имеет возможность просматривать полный список своих пациентов, включая их основные данные и историю болезни."
+                    android:textColor="#333333"
+                    android:textSize="16sp"
+                    android:layout_marginTop="8dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#CCCCCC"
+                    android:layout_marginVertical="16dp" />
+
+                <TextView
+                    android:id="@+id/conclusionTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="4dp"
+                    android:fontFamily="@font/ubuntu_light"
+                    android:text="С Diabet Diary вы сможете значительно повысить качество медицинского обслуживания и улучшить результаты лечения ваших пациентов."
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#E0FFE0"
+        app:headerLayout="@layout/nav_header" />
+</androidx.drawerlayout.widget.DrawerLayout>

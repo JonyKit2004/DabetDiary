@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E0FFE0">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/green"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:title="  " />
+
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="354dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:text="Калькулятор Хлебных Единиц"
+                    android:textColor="#000000"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/food_grams"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Сколько грамм пищи съедено"
+                    android:inputType="number"
+                    android:minHeight="48dp"
+                    android:padding="10dp"
+                    android:textColor="#000000"
+                    android:textColorHint="@color/dark_gray" />
+
+                <EditText
+                    android:id="@+id/carbs_per_100g"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Сколько углеводов на 100г"
+                    android:inputType="numberDecimal"
+                    android:minHeight="48dp"
+                    android:padding="10dp"
+                    android:textColor="#000000"
+                    android:textColorHint="@color/dark_gray" />
+
+                <EditText
+                    android:id="@+id/carbs_per_unit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Сколько углеводов на 1 хлебную единицу"
+                    android:inputType="numberDecimal"
+                    android:minHeight="48dp"
+                    android:padding="10dp"
+                    android:textColor="#000000"
+                    android:textColorHint="@color/dark_gray" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/result_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/green"
+                        android:gravity="center"
+                        android:text="Посчитать"
+                        android:textColor="@android:color/white"
+                        app:iconPadding="8dp" />
+
+                    <Button
+                        android:id="@+id/clear_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/green"
+                        android:gravity="center"
+                        android:text="Очистить"
+                        android:textColor="@android:color/white"
+                        app:iconPadding="8dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Результат"
+                    android:inputType="numberDecimal"
+                    android:minHeight="48dp"
+                    android:paddingBottom="20dp"
+                    android:textColor="#000000"
+                    android:textColorHint="@color/dark_gray" />
+
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#E0FFE0"
+        app:headerLayout="@layout/nav_header" />
+</androidx.drawerlayout.widget.DrawerLayout>
